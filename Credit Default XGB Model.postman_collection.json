@@ -1,0 +1,72 @@
+{
+  "info": {
+    "_postman_id": "a21a2da8-2156-4857-a5e0-9aaea1079139",
+    "name": "Credit Default XGB Model",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "10945762"
+  },
+  "item": [
+    {
+      "name": "Predict Creadit Default(<50%)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"annual_income\": 482087,\r\n  \"tax_liens\": 0,\r\n  \"number_of_open_accounts\": 11,\r\n  \"years_of_credit_history\": 26,\r\n  \"maximum_open_credit\": 685960,\r\n  \"number_of_credit_problems\": 1,\r\n  \"bankruptcies\": 0,\r\n  \"current_loan_amount\": 99999999,\r\n  \"current_credit_balance\": 47386,\r\n  \"monthly_debt\": 7914,\r\n  \"credit_score\": 749,\r\n  \r\n  \"home_ownership\": \"own_home\",\r\n  \"years_in_current_job\": \"10plus_years\",\r\n  \"purpose\": \"debt_consolidation\",\r\n  \"term\": \"short_term\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/predict",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "predict"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Predict Creadit Default(>50%)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"annual_income\": 1040060,\r\n  \"credit_score\": 705,\r\n  \"number_of_open_accounts\": 13,\r\n  \"years_of_credit_history\": 12,\r\n  \"maximum_open_credit\": 330374,\r\n  \"current_loan_amount\": 250888,\r\n  \"current_credit_balance\": 89015,\r\n  \"monthly_debt\": 19761,\r\n  \"tax_liens\": 0,\r\n  \"number_of_credit_problems\": 0,\r\n  \"bankruptcies\": 0,\r\n  \r\n  \"home_ownership\": \"rent\",\r\n  \"years_in_current_job\": \"3_years\",\r\n  \"purpose\": \"other\",\r\n  \"term\": \"short_term\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/predict",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "predict"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
